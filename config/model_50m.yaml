@@ -1,0 +1,42 @@
+model:
+  n_layer: 10
+  n_embd: 576
+  n_head: 8
+  n_kv_head: 8
+  seq_len: 512
+  vocab_size: 8000
+  dropout: 0.0
+  bias: false
+  norm_eps: 1.0e-5
+
+data:
+  dataset_id: roneneldan/TinyStories
+  output_dir: data/tinystories
+  vocab_size: 8000
+  val_ratio: 0.01
+  max_samples: 0          # 0 = full dataset; use 10000 for smoke tests
+  min_chars: 10
+  max_chars: 0            # 0 = no upper limit
+
+train:
+  batch_size: 2
+  grad_accum_steps: 8
+  max_steps: 100000
+  learning_rate: 3.0e-4
+  weight_decay: 0.1
+  betas: [0.9, 0.95]
+  grad_clip: 1.0
+  warmup_steps: 1000
+  lr_min: 1.0e-5
+  dtype: bfloat16
+  grad_checkpoint: false
+  seed: 42
+  log_every: 10
+  eval_every: 1000
+  save_every: 5000
+  checkpoint_dir: checkpoints/run-001
+
+eval:
+  temperature: 0.8
+  top_p: 0.9
+  max_new_tokens: 128
