@@ -96,6 +96,51 @@ Run one system at a time. On a Mac mini, model weights share memory with the bro
 
 Latency tells you whether a ticket can be filed while the person is still looking at it. Accuracy tells you how often the queue is right. AI Resolution Rate tells you how much of the pile the computer takes. Cost tells you what 1,000 tickets would cost, with Jev as the only system that sends text off the machine.
 
+## Results
+
+Same 200 synthetic tickets, cutoff 0.8. A high-confidence mistake is a wrong queue the system would still file on its own.
+
+Jev’s cost is $0 here because `JEV_COST_PER_CALL_USD` is still 0. The API is not free. Local cost is model time at $0.05 per hour.
+
+| System | Latency p95 | Accuracy | AI Resolution Rate | Cost / 1,000 | High-confidence mistakes |
+|---|---:|---:|---:|---:|---:|
+| Qwen | 1,917 ms | 94.0% (188/200) | 100% (200/200) | $0.0224 | 12 |
+| Jev | 367 ms | 100% (200/200) | 97.0% (194/200) | $0.00 | 0 |
+| Laya | 50 ms | 70.0% (140/200) | 62.0% (124/200) | $0.0007 | 9 |
+| Laya typed | 95 ms | 75.5% (151/200) | 27.0% (54/200) | $0.0011 | 0 |
+| Kev 0.8B | 170 ms | 84.0% (168/200) | 6.5% (13/200) | $0.0023 | 0 |
+| Kev 4B | 2,009 ms | 92.0% (184/200) | 11.5% (23/200) | $0.0269 | 0 |
+| Winnow e4b | 614 ms | 96.5% (193/200) | 77.0% (154/200) | $0.0083 | 7 |
+| Winnow 12B | 2,341 ms | 96.5% (193/200) | 100% (200/200) | $0.0240 | 7 |
+
+Correct tickets by the queue they belonged to. Each column is correct / tickets in that queue.
+
+| System | Billing | Refunds | API access | Bugs | Sales | Other |
+|---|---:|---:|---:|---:|---:|---:|
+| Qwen | 34/34 | 33/33 | 33/33 | 34/34 | 33/33 | 21/33 |
+| Jev | 34/34 | 33/33 | 33/33 | 34/34 | 33/33 | 33/33 |
+| Laya | 34/34 | 30/33 | 26/33 | 34/34 | 14/33 | 2/33 |
+| Laya typed | 34/34 | 23/33 | 26/33 | 34/34 | 13/33 | 21/33 |
+| Kev 0.8B | 34/34 | 30/33 | 33/33 | 20/34 | 18/33 | 33/33 |
+| Kev 4B | 29/34 | 22/33 | 33/33 | 34/34 | 33/33 | 33/33 |
+| Winnow e4b | 34/34 | 26/33 | 33/33 | 34/34 | 33/33 | 33/33 |
+| Winnow 12B | 34/34 | 26/33 | 33/33 | 34/34 | 33/33 | 33/33 |
+
+Where the misses went:
+
+| System | Misses | Pattern |
+|---|---:|---|
+| Qwen | 12 | `other` → billing (9), `other` → bugs (3). All twelve were filed at confidence 0.95. |
+| Jev | 0 | Every queue was perfect. Six correct refunds stayed under 0.8 and went to a person. |
+| Laya | 60 | Sales 14/33 and `other` 2/33. Nine mistakes were still auto-filed, mostly API access called bugs. |
+| Laya typed | 49 | `other` rises to 21/33. Refunds fall to 23/33. No high-confidence mistake. |
+| Kev 0.8B | 32 | Bugs → `other` (14) and sales → `other` (15). |
+| Kev 4B | 16 | Refunds → billing (11) and billing → `other` (5), all under 0.8. |
+| Winnow e4b | 7 | The same seven refunds sent to billing, all auto-filed (0.81–0.85). |
+| Winnow 12B | 7 | Those same seven refunds, auto-filed with higher confidence (0.88–0.96). |
+
+Jev is the only run that is fully correct and still files most of the pile. Winnow e4b is the closest local system. Winnow 12B ties it on accuracy and is worse on speed, cost, and confidence: the larger model became more sure of the same refund-versus-billing mistake.
+
 ## Run
 
 Copy `.env.example` to `.env`. Then, from the project root:
