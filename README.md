@@ -1,166 +1,116 @@
-# TinyStories-50M — Small Language Model Research Lab
+# Ticket routing POC
 
-A local research workspace for training and experimenting with a **~50M parameter** decoder-only language model on **Apple Silicon** (Mac Mini), using **MLX** and the **TinyStories** dataset.
+A small local proof of concept for a video. Four systems read the same support tickets and pick a queue. One screen runs each system and shows four numbers.
 
-Designed for research, ablations, and proof-of-concepts — not production-scale pretraining.
+The long research bench is described in `ticket-routing-poc-spec.md`. This POC is the cut we are building.
 
-## Goals
+## The question
 
-- Train a small GPT-style model from scratch on TinyStories
-- Stay within a **10 GB RAM** budget during training
-- Provide a reproducible loop: data → train → eval → sample
-- Support fast iteration for architecture and hyperparameter experiments
+Of Qwen, Jev, Laya, and Kev 0.8B, which one should file support tickets, and how many of those tickets still need a person?
 
-## Requirements
+## Queues
 
-| Requirement | Minimum |
-|---|---|
-| Machine | Mac with Apple Silicon (M-series) |
-| RAM | 16 GB unified memory recommended; training capped at ~10 GB |
-| OS | macOS 14+ |
-| Python | 3.10+ (tested with 3.14 + MLX 0.31) |
-| Disk | ~5 GB free (dataset cache + checkpoints) |
+A queue is the inbox a ticket is sent to. The model reads the ticket and picks one. With one queue there is nothing to decide.
 
-## Project Structure
+| Key | Queue | What lands there |
+|---|---|---|
+| `billing` | Billing | Payments, invoices, plan changes, failed charges |
+| `refunds` | Refunds | Requests to return money |
+| `api_access` | API access | API keys, dashboard access, rate limits |
+| `bugs` | Bugs | Errors or broken features |
+| `sales` | Sales | Pricing and plan questions from prospects |
+| `other` | Other | Anything that does not clearly fit |
 
-```text
-.
-├── README.md              # This file — overview and run instructions
-├── requirements.txt       # Python dependencies
-├── config/
-│   └── model_50m.yaml     # Model + training configuration
-├── src/
-│   ├── config.py          # YAML loader + CLI override helpers
-│   ├── data/              # Dataset download, tokenization, batch loader
-│   ├── model/             # GPT-style transformer (MLX)
-│   ├── train/             # Training loop, checkpointing, logging
-│   └── eval/              # Perplexity + text generation
-├── scripts/
-│   ├── prepare_data.py    # Download and tokenize TinyStories
-│   ├── train.py           # Main training entrypoint
-│   ├── sample.py          # Generate text from a checkpoint
-│   ├── eval.py            # Validation loss / perplexity
-│   └── serve.py           # Local story page
-├── web/
-│   └── index.html         # Story page markup and styles
-├── data/                  # Local tokenized shards (gitignored)
-├── checkpoints/           # Saved model weights (gitignored)
-└── .cache/                # Hugging Face cache (gitignored)
+## Tickets
+
+200 tickets, the same set for every system. About 30–35 tickets in each queue, so one busy inbox cannot carry the score.
+
+Each ticket has an id, the text, and the correct queue (`gold_queue`). Synthetic tickets are fine for the video if the video says they are synthetic. They are cleaner than real support mail, so the numbers demonstrate the method.
+
+## Systems
+
+| System | Where it runs | Confidence |
+|---|---|---|
+| Qwen | Local instruct model | A number it writes in its answer, from 0 to 1 |
+| Jev | TypeSafe API (`jev-latest`) | Probability of the queue it picked. Ticket text leaves the machine |
+| Laya | Local, Ollaya tag `laya:en` | Probability of the queue it picked |
+| Laya typed | Local, Ollaya tag `laya:typed-decisions` | Probability of the queue it picked |
+| Kev 0.8B | Local | Probability of the queue it picked |
+| Kev 4B | Local, Ollaya tag `kev:4b` | Probability of the queue it picked |
+| Winnow e4b | Local, Ollaya tag `winnow:e4b` | Probability of the queue it picked |
+| Winnow 12B | Local, Ollaya tag `winnow:12b` | Probability of the queue it picked |
+
+Jev, Laya, Kev, and Winnow score every queue and return those probabilities. Qwen is asked for the queue and a confidence.
+
+## The four metrics
+
+Reported in this order, for each system, over the same 200 tickets.
+
+| Order | Metric | What it is |
+|---|---|---|
+| 1 | Latency | p95, in milliseconds. Nineteen out of twenty tickets finish faster than this. |
+| 2 | Accuracy | Share of all 200 tickets sent to the correct queue. An invalid answer counts as wrong. |
+| 3 | AI Resolution Rate | Share scored 0.8 or higher. The computer files those. Every ticket under 0.8 goes to a human. |
+| 4 | Cost per thousand tickets | The bill scaled to 1,000 tickets, in USD. |
+
+The 0.8 cutoff is fixed before any scores are looked at, and it is the same for all four systems.
+
+On 100 tickets, if 60 score 0.8 or higher, the AI Resolution Rate is 60%. A person reads the other 40. Those 60 still include mistakes. Accuracy is what shows those mistakes.
+
+At 200 tickets, a gap of a few points is noise. A gap of about 10 points is enough to say on camera.
+
+### Cost
+
+Jev’s cost comes from its API price. Check the price for 200 calls before that run.
+
+Qwen, Laya, and Kev are priced as time on the Mac: `(total compute seconds / 3600) × 0.05`. The $0.05 per hour figure is an assumption for hardware and electricity. Show it next to the local cost numbers.
+
+## What one run stores
+
+Each system writes one file when its button is pressed:
+
+```
+results/qwen.json
+results/jev.json
+results/laya.json
+results/laya-typed-decisions.json
+results/kev-0.8b.json
+results/kev-4b.json
+results/winnow-e4b.json
+results/winnow-12b.json
 ```
 
-## Quick Start
+The file has the four aggregate metrics and one record per ticket. Per ticket, store the fields the aggregates are built from: predicted queue, correct or not, confidence, whether it was auto-resolved (`confidence >= 0.8`), latency, cost, and the raw reply. The shape is in `Tech.md`.
 
-### 1. Create a virtual environment
+A batch job writes `results/batch/<system>.json` instead. That file keeps the single request payload, the reply, the HTTP status, and the latency.
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -U pip
-pip install -r requirements.txt
+## The screen
+
+One page. One button per system: **Run Qwen**, **Run Jev**, **Run Laya**, **Run Laya typed**, **Run Kev 0.8B**, **Run Kev 4B**, **Run Winnow e4b**, **Run Winnow 12B**. Each button sends all 200 tickets through that system only. A run shows progress (`34 / 200`). When it finishes, that system’s column fills in with Latency, Accuracy, AI Resolution Rate, and Cost per thousand tickets.
+
+The page uses a warm paper background and a strong contrasting color for each system, on its button and in its results column. Colors are listed in `Tech.md`.
+
+Run one system at a time. On a Mac mini, model weights share memory with the browser and the OS.
+
+## How to read a result
+
+Latency tells you whether a ticket can be filed while the person is still looking at it. Accuracy tells you how often the queue is right. AI Resolution Rate tells you how much of the pile the computer takes. Cost tells you what 1,000 tickets would cost, with Jev as the only system that sends text off the machine.
+
+## Run
+
+Copy `.env.example` to `.env`. Then, from the project root:
+
+```
+uv sync
+uv run uvicorn backend.app:app --host 127.0.0.1 --port 8000
 ```
 
-Optional — keep Hugging Face cache inside the project:
+In a second terminal:
 
-```bash
-export HF_HOME="$(pwd)/.cache/huggingface"
+```
+cd frontend
+npm install
+npm run dev
 ```
 
-### 2. Prepare TinyStories
-
-**Smoke test (500 stories):**
-
-```bash
-python scripts/prepare_data.py --max-samples 500
-```
-
-**Full dataset:**
-
-```bash
-python scripts/prepare_data.py --max-samples 0
-```
-
-Outputs under `data/tinystories/`:
-
-- `tokenizer.json` — 8k BPE tokenizer
-- `train.bin` / `val.bin` — memmapped token shards
-- `meta.json` — token counts and split info
-
-### 3. Train (~50M params)
-
-**Smoke test (10 steps):**
-
-```bash
-python scripts/train.py --max-steps 10 --checkpoint-dir checkpoints/smoke-test
-```
-
-**Default run (100k steps, config-driven):**
-
-```bash
-python scripts/train.py \
-  --config config/model_50m.yaml \
-  --data-dir data/tinystories \
-  --checkpoint-dir checkpoints/run-001
-```
-
-Training logs loss, learning rate, tokens/sec, and process RSS. Checkpoints saved as `step_{N}.safetensors` + `step_{N}.json`.
-
-### 4. Generate samples
-
-```bash
-python scripts/sample.py \
-  --checkpoint checkpoints/run-001/step_50000.safetensors \
-  --prompt "Once upon a time" \
-  --max-tokens 128
-```
-
-### 5. Evaluate
-
-```bash
-python scripts/eval.py \
-  --checkpoint checkpoints/run-001/step_50000.safetensors \
-  --data-dir data/tinystories
-```
-
-### 6. Open the story page
-
-Loads the Phase 2 checkpoint once and streams a story in the browser. Listens on localhost only.
-
-```bash
-source .venv/bin/activate
-python scripts/serve.py
-```
-
-Then open [http://127.0.0.1:8000](http://127.0.0.1:8000).
-
-## Training Phases (Recommended)
-
-| Phase | Purpose | Dataset | Steps |
-|---|---|---|---|
-| **0 — Smoke test** | Validate pipeline and RAM usage | 500–10k samples | 10–1k |
-| **1 — Short run** | Confirm loss decrease and coherent samples | 1M samples | ~10k |
-| **2 — Full run** | Research baseline checkpoint | Full TinyStories | 50k–200k |
-
-Start with Phase 0 before committing to a long run.
-
-**Phase 1 complete:** `checkpoints/run-001/step_10000.safetensors` — val perplexity **5.24**.
-
-**Phase 2 complete:** `checkpoints/run-full-20k/step_20000.safetensors` — val perplexity **4.25** on full TinyStories.
-
-## Memory Budget
-
-Training targets **≤10 GB** peak RAM:
-
-- ~49M parameters (10 layers × 576 dim × 8 heads)
-- Context length 512
-- Micro-batch 2 × grad accumulation 8 (effective batch 16)
-- Memmapped `.bin` loader — dataset not loaded into RAM
-
-## References
-
-- [TinyStories](https://huggingface.co/datasets/roneneldan/TinyStories) — Ronen Eldan et al.
-- [MLX](https://github.com/ml-explore/mlx) — Apple machine learning framework
-- [nanoGPT](https://github.com/karpathy/nanoGPT) — conceptual baseline for small GPT training
-
-## License
-
-Research and experimentation use. Dataset subject to [TinyStories terms on Hugging Face](https://huggingface.co/datasets/roneneldan/TinyStories).
+Open `http://127.0.0.1:5173`. Each button runs all 200 tickets through that one system and writes `results/<system>.json`. Qwen needs Ollama. Laya and Kev 0.8B need Ollaya. Jev needs `JEV_API_KEY`. Details are in `Tech.md`.

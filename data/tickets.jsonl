@@ -1,0 +1,200 @@
+{"id": "T-0001", "text": "The Starter invoice for March failed on the card ending 4242. I did not change the plan.", "gold_queue": "billing"}
+{"id": "T-0002", "text": "Please refund the $19 Starter charge from March. I want the money returned to card 4242.", "gold_queue": "refunds"}
+{"id": "T-0003", "text": "My API key for the Starter workspace stopped working in March. The dashboard will not show the key.", "gold_queue": "api_access"}
+{"id": "T-0004", "text": "The export button on the Starter reports page does nothing. It has been broken since March.", "gold_queue": "bugs"}
+{"id": "T-0005", "text": "Before we buy, what is the price of the Starter plan for a team of 1?", "gold_queue": "sales"}
+{"id": "T-0006", "text": "Please change the email address on account 1. Login and billing both work.", "gold_queue": "other"}
+{"id": "T-0007", "text": "Please send the April receipt for the $29 Pro charge on card 1881.", "gold_queue": "billing"}
+{"id": "T-0008", "text": "I asked for a refund of invoice 2 and the $29 has not come back to card 1881.", "gold_queue": "refunds"}
+{"id": "T-0009", "text": "Where do I create a new API key for workspace 2? The Pro dashboard hides the keys page.", "gold_queue": "api_access"}
+{"id": "T-0010", "text": "Opening project 2 shows a blank page and a 500 error. This started in April.", "gold_queue": "bugs"}
+{"id": "T-0011", "text": "I am evaluating tools this April. Can you send a quote for the Pro plan?", "gold_queue": "sales"}
+{"id": "T-0012", "text": "What are your support hours? I am asking in April and nothing is broken.", "gold_queue": "other"}
+{"id": "T-0013", "text": "I updated card 9033 and the $49 Team renewal in May still shows as a failed payment.", "gold_queue": "billing"}
+{"id": "T-0014", "text": "Cancel the Team plan from May and return the $49 you took.", "gold_queue": "refunds"}
+{"id": "T-0015", "text": "The API has been returning rate limit errors since May. Request 3 was rejected.", "gold_queue": "api_access"}
+{"id": "T-0016", "text": "Search returns records from the wrong workspace. Broken since May, example id 3.", "gold_queue": "bugs"}
+{"id": "T-0017", "text": "We have not signed up. Do you discount Team for 3 people?", "gold_queue": "sales"}
+{"id": "T-0018", "text": "I want to delete account 3. I do not need money returned.", "gold_queue": "other"}
+{"id": "T-0019", "text": "We need invoice 4 for the Business workspace. The June payment of $79 did not clear.", "gold_queue": "billing"}
+{"id": "T-0020", "text": "The extra $79 charge in June on card 5510 should be refunded. Reference 4.", "gold_queue": "refunds"}
+{"id": "T-0021", "text": "Please reset the API secret for workspace 4. I can sign in, but the key panel is locked.", "gold_queue": "api_access"}
+{"id": "T-0022", "text": "The save button overlaps the footer and the form will not submit. Seen on account 4 in June.", "gold_queue": "bugs"}
+{"id": "T-0023", "text": "What is included in Business at $79 a month? We are still comparing vendors.", "gold_queue": "sales"}
+{"id": "T-0024", "text": "Is the office address on the June page still current? Account 4 is fine.", "gold_queue": "other"}
+{"id": "T-0025", "text": "Switch the Starter plan payment method to the card ending 2208. The July charge was $99.", "gold_queue": "billing"}
+{"id": "T-0026", "text": "We were billed $99 for Starter in July after we already paid. Please return that money.", "gold_queue": "refunds"}
+{"id": "T-0027", "text": "Our dashboard says the Starter account has no API access. We need the key we created in July.", "gold_queue": "api_access"}
+{"id": "T-0028", "text": "The Starter settings page crashes when I open notifications. Error started in July, case 5.", "gold_queue": "bugs"}
+{"id": "T-0029", "text": "Can a prospect get a demo of Starter? We would decide in July. Reference 5.", "gold_queue": "sales"}
+{"id": "T-0030", "text": "Can I rename workspace 5? Nothing is broken and I am not asking about price.", "gold_queue": "other"}
+{"id": "T-0031", "text": "The $149 charge on card 7741 in August does not match the Pro price on invoice 6.", "gold_queue": "billing"}
+{"id": "T-0032", "text": "Please refund the $149 Pro charge from August. I want the money returned to card 7741.", "gold_queue": "refunds"}
+{"id": "T-0033", "text": "My API key for the Pro workspace stopped working in August. The dashboard will not show the key.", "gold_queue": "api_access"}
+{"id": "T-0034", "text": "The export button on the Pro reports page does nothing. It has been broken since August.", "gold_queue": "bugs"}
+{"id": "T-0035", "text": "Before we buy, what is the price of the Pro plan for a team of 6?", "gold_queue": "sales"}
+{"id": "T-0036", "text": "Thanks for the help on request 6 in August. No further action.", "gold_queue": "other"}
+{"id": "T-0037", "text": "The Team invoice for September failed on the card ending 4242. I did not change the plan.", "gold_queue": "billing"}
+{"id": "T-0038", "text": "I asked for a refund of invoice 7 and the $199 has not come back to card 4242.", "gold_queue": "refunds"}
+{"id": "T-0039", "text": "Where do I create a new API key for workspace 7? The Team dashboard hides the keys page.", "gold_queue": "api_access"}
+{"id": "T-0040", "text": "Opening project 7 shows a blank page and a 500 error. This started in September.", "gold_queue": "bugs"}
+{"id": "T-0041", "text": "I am evaluating tools this September. Can you send a quote for the Team plan?", "gold_queue": "sales"}
+{"id": "T-0042", "text": "Please change the email address on account 7. Login and billing both work.", "gold_queue": "other"}
+{"id": "T-0043", "text": "Please send the March receipt for the $19 Business charge on card 1881.", "gold_queue": "billing"}
+{"id": "T-0044", "text": "Cancel the Business plan from March and return the $19 you took.", "gold_queue": "refunds"}
+{"id": "T-0045", "text": "The API has been returning rate limit errors since March. Request 8 was rejected.", "gold_queue": "api_access"}
+{"id": "T-0046", "text": "Search returns records from the wrong workspace. Broken since March, example id 8.", "gold_queue": "bugs"}
+{"id": "T-0047", "text": "We have not signed up. Do you discount Business for 8 people?", "gold_queue": "sales"}
+{"id": "T-0048", "text": "What are your support hours? I am asking in March and nothing is broken.", "gold_queue": "other"}
+{"id": "T-0049", "text": "I updated card 9033 and the $29 Starter renewal in April still shows as a failed payment.", "gold_queue": "billing"}
+{"id": "T-0050", "text": "The extra $29 charge in April on card 9033 should be refunded. Reference 9.", "gold_queue": "refunds"}
+{"id": "T-0051", "text": "Please reset the API secret for workspace 9. I can sign in, but the key panel is locked.", "gold_queue": "api_access"}
+{"id": "T-0052", "text": "The save button overlaps the footer and the form will not submit. Seen on account 9 in April.", "gold_queue": "bugs"}
+{"id": "T-0053", "text": "What is included in Starter at $29 a month? We are still comparing vendors.", "gold_queue": "sales"}
+{"id": "T-0054", "text": "I want to delete account 9. I do not need money returned.", "gold_queue": "other"}
+{"id": "T-0055", "text": "We need invoice 10 for the Pro workspace. The May payment of $49 did not clear.", "gold_queue": "billing"}
+{"id": "T-0056", "text": "We were billed $49 for Pro in May after we already paid. Please return that money.", "gold_queue": "refunds"}
+{"id": "T-0057", "text": "Our dashboard says the Pro account has no API access. We need the key we created in May.", "gold_queue": "api_access"}
+{"id": "T-0058", "text": "The Pro settings page crashes when I open notifications. Error started in May, case 10.", "gold_queue": "bugs"}
+{"id": "T-0059", "text": "Can a prospect get a demo of Pro? We would decide in May. Reference 10.", "gold_queue": "sales"}
+{"id": "T-0060", "text": "Is the office address on the May page still current? Account 10 is fine.", "gold_queue": "other"}
+{"id": "T-0061", "text": "Switch the Team plan payment method to the card ending 2208. The June charge was $79.", "gold_queue": "billing"}
+{"id": "T-0062", "text": "Please refund the $79 Team charge from June. I want the money returned to card 2208.", "gold_queue": "refunds"}
+{"id": "T-0063", "text": "My API key for the Team workspace stopped working in June. The dashboard will not show the key.", "gold_queue": "api_access"}
+{"id": "T-0064", "text": "The export button on the Team reports page does nothing. It has been broken since June.", "gold_queue": "bugs"}
+{"id": "T-0065", "text": "Before we buy, what is the price of the Team plan for a team of 11?", "gold_queue": "sales"}
+{"id": "T-0066", "text": "Can I rename workspace 11? Nothing is broken and I am not asking about price.", "gold_queue": "other"}
+{"id": "T-0067", "text": "The $99 charge on card 7741 in July does not match the Business price on invoice 12.", "gold_queue": "billing"}
+{"id": "T-0068", "text": "I asked for a refund of invoice 12 and the $99 has not come back to card 7741.", "gold_queue": "refunds"}
+{"id": "T-0069", "text": "Where do I create a new API key for workspace 12? The Business dashboard hides the keys page.", "gold_queue": "api_access"}
+{"id": "T-0070", "text": "Opening project 12 shows a blank page and a 500 error. This started in July.", "gold_queue": "bugs"}
+{"id": "T-0071", "text": "I am evaluating tools this July. Can you send a quote for the Business plan?", "gold_queue": "sales"}
+{"id": "T-0072", "text": "Thanks for the help on request 12 in July. No further action.", "gold_queue": "other"}
+{"id": "T-0073", "text": "The Starter invoice for August failed on the card ending 4242. I did not change the plan.", "gold_queue": "billing"}
+{"id": "T-0074", "text": "Cancel the Starter plan from August and return the $149 you took.", "gold_queue": "refunds"}
+{"id": "T-0075", "text": "The API has been returning rate limit errors since August. Request 13 was rejected.", "gold_queue": "api_access"}
+{"id": "T-0076", "text": "Search returns records from the wrong workspace. Broken since August, example id 13.", "gold_queue": "bugs"}
+{"id": "T-0077", "text": "We have not signed up. Do you discount Starter for 13 people?", "gold_queue": "sales"}
+{"id": "T-0078", "text": "Please change the email address on account 13. Login and billing both work.", "gold_queue": "other"}
+{"id": "T-0079", "text": "Please send the September receipt for the $199 Pro charge on card 1881.", "gold_queue": "billing"}
+{"id": "T-0080", "text": "The extra $199 charge in September on card 1881 should be refunded. Reference 14.", "gold_queue": "refunds"}
+{"id": "T-0081", "text": "Please reset the API secret for workspace 14. I can sign in, but the key panel is locked.", "gold_queue": "api_access"}
+{"id": "T-0082", "text": "The save button overlaps the footer and the form will not submit. Seen on account 14 in September.", "gold_queue": "bugs"}
+{"id": "T-0083", "text": "What is included in Pro at $199 a month? We are still comparing vendors.", "gold_queue": "sales"}
+{"id": "T-0084", "text": "What are your support hours? I am asking in September and nothing is broken.", "gold_queue": "other"}
+{"id": "T-0085", "text": "I updated card 9033 and the $19 Team renewal in March still shows as a failed payment.", "gold_queue": "billing"}
+{"id": "T-0086", "text": "We were billed $19 for Team in March after we already paid. Please return that money.", "gold_queue": "refunds"}
+{"id": "T-0087", "text": "Our dashboard says the Team account has no API access. We need the key we created in March.", "gold_queue": "api_access"}
+{"id": "T-0088", "text": "The Team settings page crashes when I open notifications. Error started in March, case 15.", "gold_queue": "bugs"}
+{"id": "T-0089", "text": "Can a prospect get a demo of Team? We would decide in March. Reference 15.", "gold_queue": "sales"}
+{"id": "T-0090", "text": "I want to delete account 15. I do not need money returned.", "gold_queue": "other"}
+{"id": "T-0091", "text": "We need invoice 16 for the Business workspace. The April payment of $29 did not clear.", "gold_queue": "billing"}
+{"id": "T-0092", "text": "Please refund the $29 Business charge from April. I want the money returned to card 5510.", "gold_queue": "refunds"}
+{"id": "T-0093", "text": "My API key for the Business workspace stopped working in April. The dashboard will not show the key.", "gold_queue": "api_access"}
+{"id": "T-0094", "text": "The export button on the Business reports page does nothing. It has been broken since April.", "gold_queue": "bugs"}
+{"id": "T-0095", "text": "Before we buy, what is the price of the Business plan for a team of 16?", "gold_queue": "sales"}
+{"id": "T-0096", "text": "Is the office address on the April page still current? Account 16 is fine.", "gold_queue": "other"}
+{"id": "T-0097", "text": "Switch the Starter plan payment method to the card ending 2208. The May charge was $49.", "gold_queue": "billing"}
+{"id": "T-0098", "text": "I asked for a refund of invoice 17 and the $49 has not come back to card 2208.", "gold_queue": "refunds"}
+{"id": "T-0099", "text": "Where do I create a new API key for workspace 17? The Starter dashboard hides the keys page.", "gold_queue": "api_access"}
+{"id": "T-0100", "text": "Opening project 17 shows a blank page and a 500 error. This started in May.", "gold_queue": "bugs"}
+{"id": "T-0101", "text": "I am evaluating tools this May. Can you send a quote for the Starter plan?", "gold_queue": "sales"}
+{"id": "T-0102", "text": "Can I rename workspace 17? Nothing is broken and I am not asking about price.", "gold_queue": "other"}
+{"id": "T-0103", "text": "The $79 charge on card 7741 in June does not match the Pro price on invoice 18.", "gold_queue": "billing"}
+{"id": "T-0104", "text": "Cancel the Pro plan from June and return the $79 you took.", "gold_queue": "refunds"}
+{"id": "T-0105", "text": "The API has been returning rate limit errors since June. Request 18 was rejected.", "gold_queue": "api_access"}
+{"id": "T-0106", "text": "Search returns records from the wrong workspace. Broken since June, example id 18.", "gold_queue": "bugs"}
+{"id": "T-0107", "text": "We have not signed up. Do you discount Pro for 18 people?", "gold_queue": "sales"}
+{"id": "T-0108", "text": "Thanks for the help on request 18 in June. No further action.", "gold_queue": "other"}
+{"id": "T-0109", "text": "The Team invoice for July failed on the card ending 4242. I did not change the plan.", "gold_queue": "billing"}
+{"id": "T-0110", "text": "The extra $99 charge in July on card 4242 should be refunded. Reference 19.", "gold_queue": "refunds"}
+{"id": "T-0111", "text": "Please reset the API secret for workspace 19. I can sign in, but the key panel is locked.", "gold_queue": "api_access"}
+{"id": "T-0112", "text": "The save button overlaps the footer and the form will not submit. Seen on account 19 in July.", "gold_queue": "bugs"}
+{"id": "T-0113", "text": "What is included in Team at $99 a month? We are still comparing vendors.", "gold_queue": "sales"}
+{"id": "T-0114", "text": "Please change the email address on account 19. Login and billing both work.", "gold_queue": "other"}
+{"id": "T-0115", "text": "Please send the August receipt for the $149 Business charge on card 1881.", "gold_queue": "billing"}
+{"id": "T-0116", "text": "We were billed $149 for Business in August after we already paid. Please return that money.", "gold_queue": "refunds"}
+{"id": "T-0117", "text": "Our dashboard says the Business account has no API access. We need the key we created in August.", "gold_queue": "api_access"}
+{"id": "T-0118", "text": "The Business settings page crashes when I open notifications. Error started in August, case 20.", "gold_queue": "bugs"}
+{"id": "T-0119", "text": "Can a prospect get a demo of Business? We would decide in August. Reference 20.", "gold_queue": "sales"}
+{"id": "T-0120", "text": "What are your support hours? I am asking in August and nothing is broken.", "gold_queue": "other"}
+{"id": "T-0121", "text": "I updated card 9033 and the $199 Starter renewal in September still shows as a failed payment.", "gold_queue": "billing"}
+{"id": "T-0122", "text": "Please refund the $199 Starter charge from September. I want the money returned to card 9033.", "gold_queue": "refunds"}
+{"id": "T-0123", "text": "My API key for the Starter workspace stopped working in September. The dashboard will not show the key.", "gold_queue": "api_access"}
+{"id": "T-0124", "text": "The export button on the Starter reports page does nothing. It has been broken since September.", "gold_queue": "bugs"}
+{"id": "T-0125", "text": "Before we buy, what is the price of the Starter plan for a team of 21?", "gold_queue": "sales"}
+{"id": "T-0126", "text": "I want to delete account 21. I do not need money returned.", "gold_queue": "other"}
+{"id": "T-0127", "text": "We need invoice 22 for the Pro workspace. The March payment of $19 did not clear.", "gold_queue": "billing"}
+{"id": "T-0128", "text": "I asked for a refund of invoice 22 and the $19 has not come back to card 5510.", "gold_queue": "refunds"}
+{"id": "T-0129", "text": "Where do I create a new API key for workspace 22? The Pro dashboard hides the keys page.", "gold_queue": "api_access"}
+{"id": "T-0130", "text": "Opening project 22 shows a blank page and a 500 error. This started in March.", "gold_queue": "bugs"}
+{"id": "T-0131", "text": "I am evaluating tools this March. Can you send a quote for the Pro plan?", "gold_queue": "sales"}
+{"id": "T-0132", "text": "Is the office address on the March page still current? Account 22 is fine.", "gold_queue": "other"}
+{"id": "T-0133", "text": "Switch the Team plan payment method to the card ending 2208. The April charge was $29.", "gold_queue": "billing"}
+{"id": "T-0134", "text": "Cancel the Team plan from April and return the $29 you took.", "gold_queue": "refunds"}
+{"id": "T-0135", "text": "The API has been returning rate limit errors since April. Request 23 was rejected.", "gold_queue": "api_access"}
+{"id": "T-0136", "text": "Search returns records from the wrong workspace. Broken since April, example id 23.", "gold_queue": "bugs"}
+{"id": "T-0137", "text": "We have not signed up. Do you discount Team for 23 people?", "gold_queue": "sales"}
+{"id": "T-0138", "text": "Can I rename workspace 23? Nothing is broken and I am not asking about price.", "gold_queue": "other"}
+{"id": "T-0139", "text": "The $49 charge on card 7741 in May does not match the Business price on invoice 24.", "gold_queue": "billing"}
+{"id": "T-0140", "text": "The extra $49 charge in May on card 7741 should be refunded. Reference 24.", "gold_queue": "refunds"}
+{"id": "T-0141", "text": "Please reset the API secret for workspace 24. I can sign in, but the key panel is locked.", "gold_queue": "api_access"}
+{"id": "T-0142", "text": "The save button overlaps the footer and the form will not submit. Seen on account 24 in May.", "gold_queue": "bugs"}
+{"id": "T-0143", "text": "What is included in Business at $49 a month? We are still comparing vendors.", "gold_queue": "sales"}
+{"id": "T-0144", "text": "Thanks for the help on request 24 in May. No further action.", "gold_queue": "other"}
+{"id": "T-0145", "text": "The Starter invoice for June failed on the card ending 4242. I did not change the plan.", "gold_queue": "billing"}
+{"id": "T-0146", "text": "We were billed $79 for Starter in June after we already paid. Please return that money.", "gold_queue": "refunds"}
+{"id": "T-0147", "text": "Our dashboard says the Starter account has no API access. We need the key we created in June.", "gold_queue": "api_access"}
+{"id": "T-0148", "text": "The Starter settings page crashes when I open notifications. Error started in June, case 25.", "gold_queue": "bugs"}
+{"id": "T-0149", "text": "Can a prospect get a demo of Starter? We would decide in June. Reference 25.", "gold_queue": "sales"}
+{"id": "T-0150", "text": "Please change the email address on account 25. Login and billing both work.", "gold_queue": "other"}
+{"id": "T-0151", "text": "Please send the July receipt for the $99 Pro charge on card 1881.", "gold_queue": "billing"}
+{"id": "T-0152", "text": "Please refund the $99 Pro charge from July. I want the money returned to card 1881.", "gold_queue": "refunds"}
+{"id": "T-0153", "text": "My API key for the Pro workspace stopped working in July. The dashboard will not show the key.", "gold_queue": "api_access"}
+{"id": "T-0154", "text": "The export button on the Pro reports page does nothing. It has been broken since July.", "gold_queue": "bugs"}
+{"id": "T-0155", "text": "Before we buy, what is the price of the Pro plan for a team of 26?", "gold_queue": "sales"}
+{"id": "T-0156", "text": "What are your support hours? I am asking in July and nothing is broken.", "gold_queue": "other"}
+{"id": "T-0157", "text": "I updated card 9033 and the $149 Team renewal in August still shows as a failed payment.", "gold_queue": "billing"}
+{"id": "T-0158", "text": "I asked for a refund of invoice 27 and the $149 has not come back to card 9033.", "gold_queue": "refunds"}
+{"id": "T-0159", "text": "Where do I create a new API key for workspace 27? The Team dashboard hides the keys page.", "gold_queue": "api_access"}
+{"id": "T-0160", "text": "Opening project 27 shows a blank page and a 500 error. This started in August.", "gold_queue": "bugs"}
+{"id": "T-0161", "text": "I am evaluating tools this August. Can you send a quote for the Team plan?", "gold_queue": "sales"}
+{"id": "T-0162", "text": "I want to delete account 27. I do not need money returned.", "gold_queue": "other"}
+{"id": "T-0163", "text": "We need invoice 28 for the Business workspace. The September payment of $199 did not clear.", "gold_queue": "billing"}
+{"id": "T-0164", "text": "Cancel the Business plan from September and return the $199 you took.", "gold_queue": "refunds"}
+{"id": "T-0165", "text": "The API has been returning rate limit errors since September. Request 28 was rejected.", "gold_queue": "api_access"}
+{"id": "T-0166", "text": "Search returns records from the wrong workspace. Broken since September, example id 28.", "gold_queue": "bugs"}
+{"id": "T-0167", "text": "We have not signed up. Do you discount Business for 28 people?", "gold_queue": "sales"}
+{"id": "T-0168", "text": "Is the office address on the September page still current? Account 28 is fine.", "gold_queue": "other"}
+{"id": "T-0169", "text": "Switch the Starter plan payment method to the card ending 2208. The March charge was $19.", "gold_queue": "billing"}
+{"id": "T-0170", "text": "The extra $19 charge in March on card 2208 should be refunded. Reference 29.", "gold_queue": "refunds"}
+{"id": "T-0171", "text": "Please reset the API secret for workspace 29. I can sign in, but the key panel is locked.", "gold_queue": "api_access"}
+{"id": "T-0172", "text": "The save button overlaps the footer and the form will not submit. Seen on account 29 in March.", "gold_queue": "bugs"}
+{"id": "T-0173", "text": "What is included in Starter at $19 a month? We are still comparing vendors.", "gold_queue": "sales"}
+{"id": "T-0174", "text": "Can I rename workspace 29? Nothing is broken and I am not asking about price.", "gold_queue": "other"}
+{"id": "T-0175", "text": "The $29 charge on card 7741 in April does not match the Pro price on invoice 30.", "gold_queue": "billing"}
+{"id": "T-0176", "text": "We were billed $29 for Pro in April after we already paid. Please return that money.", "gold_queue": "refunds"}
+{"id": "T-0177", "text": "Our dashboard says the Pro account has no API access. We need the key we created in April.", "gold_queue": "api_access"}
+{"id": "T-0178", "text": "The Pro settings page crashes when I open notifications. Error started in April, case 30.", "gold_queue": "bugs"}
+{"id": "T-0179", "text": "Can a prospect get a demo of Pro? We would decide in April. Reference 30.", "gold_queue": "sales"}
+{"id": "T-0180", "text": "Thanks for the help on request 30 in April. No further action.", "gold_queue": "other"}
+{"id": "T-0181", "text": "The Team invoice for May failed on the card ending 4242. I did not change the plan.", "gold_queue": "billing"}
+{"id": "T-0182", "text": "Please refund the $49 Team charge from May. I want the money returned to card 4242.", "gold_queue": "refunds"}
+{"id": "T-0183", "text": "My API key for the Team workspace stopped working in May. The dashboard will not show the key.", "gold_queue": "api_access"}
+{"id": "T-0184", "text": "The export button on the Team reports page does nothing. It has been broken since May.", "gold_queue": "bugs"}
+{"id": "T-0185", "text": "Before we buy, what is the price of the Team plan for a team of 31?", "gold_queue": "sales"}
+{"id": "T-0186", "text": "Please change the email address on account 31. Login and billing both work.", "gold_queue": "other"}
+{"id": "T-0187", "text": "Please send the June receipt for the $79 Business charge on card 1881.", "gold_queue": "billing"}
+{"id": "T-0188", "text": "I asked for a refund of invoice 32 and the $79 has not come back to card 1881.", "gold_queue": "refunds"}
+{"id": "T-0189", "text": "Where do I create a new API key for workspace 32? The Business dashboard hides the keys page.", "gold_queue": "api_access"}
+{"id": "T-0190", "text": "Opening project 32 shows a blank page and a 500 error. This started in June.", "gold_queue": "bugs"}
+{"id": "T-0191", "text": "I am evaluating tools this June. Can you send a quote for the Business plan?", "gold_queue": "sales"}
+{"id": "T-0192", "text": "What are your support hours? I am asking in June and nothing is broken.", "gold_queue": "other"}
+{"id": "T-0193", "text": "I updated card 9033 and the $99 Starter renewal in July still shows as a failed payment.", "gold_queue": "billing"}
+{"id": "T-0194", "text": "Cancel the Starter plan from July and return the $99 you took.", "gold_queue": "refunds"}
+{"id": "T-0195", "text": "The API has been returning rate limit errors since July. Request 33 was rejected.", "gold_queue": "api_access"}
+{"id": "T-0196", "text": "Search returns records from the wrong workspace. Broken since July, example id 33.", "gold_queue": "bugs"}
+{"id": "T-0197", "text": "We have not signed up. Do you discount Starter for 33 people?", "gold_queue": "sales"}
+{"id": "T-0198", "text": "I want to delete account 33. I do not need money returned.", "gold_queue": "other"}
+{"id": "T-0199", "text": "We need invoice 34 for the Pro workspace. The August payment of $149 did not clear.", "gold_queue": "billing"}
+{"id": "T-0200", "text": "The save button overlaps the footer and the form will not submit. Seen on account 34 in August.", "gold_queue": "bugs"}

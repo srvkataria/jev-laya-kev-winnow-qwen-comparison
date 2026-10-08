@@ -1,0 +1,82 @@
+# Queues and systems for the POC.
+# Ollaya tags: kev:0.8b, kev:4b, winnow:e4b, winnow:12b, laya:typed-decisions.
+# The bare tag "kev" is also 4B; this file pins kev:4b. The bare tag "winnow" is 12B.
+
+confidence_cutoff: 0.8
+
+queues:
+  billing:
+    label: Billing
+    description: Payments, invoices, plan changes, failed charges
+  refunds:
+    label: Refunds
+    description: Requests to return money
+  api_access:
+    label: API access
+    description: API keys, dashboard access, rate limits
+  bugs:
+    label: Bugs
+    description: Errors or broken features
+  sales:
+    label: Sales
+    description: Pricing and plan questions from prospects
+  other:
+    label: Other
+    description: Anything that does not clearly fit another queue
+
+systems:
+  qwen:
+    name: Qwen
+    color: "#C4501A"
+    est_ram_gb: 6
+    remote: false
+    note: null
+  jev:
+    name: Jev
+    color: "#1F4E9B"
+    est_ram_gb: 0
+    remote: true
+    note: Sends ticket text to TypeSafe
+    model: jev-latest
+  laya:
+    name: Laya
+    color: "#6E2F8A"
+    est_ram_gb: 2
+    remote: false
+    note: null
+    model: laya:en
+  laya-typed-decisions:
+    name: Laya typed
+    color: "#7C3AED"
+    est_ram_gb: 2
+    remote: false
+    note: null
+    model: laya:typed-decisions
+  kev-0.8b:
+    name: Kev 0.8B
+    color: "#0E7A4B"
+    est_ram_gb: 2
+    remote: false
+    note: null
+    model: kev:0.8b
+  kev-4b:
+    name: Kev 4B
+    color: "#0A5C44"
+    est_ram_gb: 10
+    remote: false
+    note: null
+    model: kev:4b
+  winnow-e4b:
+    name: Winnow e4b
+    color: "#9F1239"
+    est_ram_gb: 8
+    remote: false
+    note: null
+    model: winnow:e4b
+  winnow-12b:
+    name: Winnow 12B
+    color: "#831843"
+    est_ram_gb: 14
+    remote: false
+    note: null
+    model: winnow:12b

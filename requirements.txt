@@ -1,9 +1,0 @@
-mlx>=0.22.0
-datasets>=2.14.0
-huggingface_hub>=0.20.0
-tokenizers>=0.15.0
-pyyaml>=6.0
-tqdm>=4.66.0
-safetensors>=0.4.0
-numpy>=1.26.0
-psutil>=5.9.0
